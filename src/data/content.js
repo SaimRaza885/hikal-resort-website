@@ -10,31 +10,33 @@ export const faqs = [
     answer:
       "You can book directly through our website booking form or contact us via WhatsApp for a faster response. Payment before arrival by bank transfer is required — we will send you full instructions after your booking is confirmed.",
   },
-   {
+ 
+  {
     id: "2",
     question: "Is breakfast included in the room price?",
     answer:
       "Breakfast is optional and available at PKR 550 per person. It is not automatically included in the room rate but can be added at the time of booking or on arrival. In-room breakfast is also available on request.",
   },
+     
   {
     id: "3",
-    question: "Do all rooms have mountain views?",
-    answer:
-      "All rooms feature at least one of garden, mountain, or city views. The Family Suite and select Deluxe Double rooms include a private balcony or terrace with direct Rakaposhi mountain views — the most requested feature among our guests.",
-  },
-  {
-    id: "4",
-    question: "What is your cancellation policy?",
-    answer:
-      "Cancellation policies vary by room type. Most rooms offer free cancellation before a set date. No prepayment is needed for select room types — you pay at the property. Check the specific conditions of your chosen room at the time of booking.",
-  },
-  {
-    id: "5",
     question: "Are pets allowed?",
     answer:
       "Yes, pets are warmly welcome at Hikal Guest House at no extra charge.",
   },
- 
+  {
+    id: "4",
+    question: "Can you help arrange tours and local activities?",
+    answer:
+      "Absolutely. Our team can assist with hiking, cycling, bike tours, walking tours, cooking classes, and local cultural experiences around Hunza Valley. Contact us in advance and we will plan everything for you.",
+  },
+
+  {
+    id: "5",
+    question: "Is parking available and is there an airport shuttle?",
+    answer:
+      "Free private parking is available on site with no reservation needed. An airport shuttle service is also available for guests at an additional charge. The nearest airport is Gilgit Airport, approximately 56 km away.",
+  },
 ];
 
 
