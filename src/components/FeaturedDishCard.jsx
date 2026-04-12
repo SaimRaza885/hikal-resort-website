@@ -33,7 +33,7 @@ export default function FeaturedDishCard({ title, desc, price, badge, image, cla
       <div className="p-4">
         <h3 className="text-lg font-semibold text-foreground">{title}</h3>
         <p className="mt-1 text-sm text-muted-foreground">{desc}</p>
-        <p className="mt-3 text-sm font-semibold text-accent">{price}</p>
+        {/* <p className="mt-3 text-sm font-semibold text-accent">{price}</p> */}
       </div>
     </article>
   );
