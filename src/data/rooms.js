@@ -1,15 +1,19 @@
 // ================= ROOM IMAGES =================
 
 // Room 101
-import Deluxe_Double_Bedroom_101_1 from "../asserts/rooms_pic/Deluxe Double Bedroom 101/Deluxe Double Bedroom (101) 1.webp";
-import Deluxe_Double_Bedroom_102_1 from "../asserts/rooms_pic/Deluxe Double Bedroom 102/Deluxe Double Bedroom (102) 1.jpg";
-import Deluxe_Double_Bedroom_103_1 from "../asserts/rooms_pic/Deluxe Double Bedroom 103/Deluxe Double Bedroom (103) 1.jpg";
-import Premium_Quadruple_Room_104_1 from "../asserts/rooms_pic/Premium Quadrable Room 104/Premium Quadrable Room (104) 1.jpeg";
-import Deluxe_Double_Room_105_1 from "../asserts/rooms_pic/Deluxe Double Room 105/Deluxe Double Room (105) 1.jpeg";
-import Twin_Single_Room_106_1 from "../asserts/rooms_pic/Twin Single Room 106/Twin Single Room (106) 1.jpeg";
-import Family_Suite_Room_108_1 from "../asserts/rooms_pic/Family Suite Room 108/Family Suite Room (108) 1.jpeg";
+import Deluxe_Double_Bedroom_101_1 from "../asserts/rooms_pic/deluxe-double-bedroom-101/deluxe-double-bedroom-101-1.webp";
 
+import Deluxe_Double_Bedroom_102_1 from "../asserts/rooms_pic/deluxe-double-bedroom-102/deluxe-double-bedroom-102-1.jpg";
 
+import Deluxe_Double_Bedroom_103_1 from "../asserts/rooms_pic/deluxe-double-bedroom-103/deluxe-double-bedroom-103-1.jpg";
+
+import Premium_Quadruple_Room_104_1 from "../asserts/rooms_pic/premium-quadruple-room-104/premium-quadruple-room-104-1.jpeg";
+
+import Deluxe_Double_Room_105_1 from "../asserts/rooms_pic/deluxe-double-bedroom-105/deluxe-double-room-105-1.jpeg";
+
+import Twin_Single_Room_106_1 from "../asserts/rooms_pic/twin-single-room-106/twin-single-room-106-1.jpeg";
+
+import Family_Suite_Room_108_1 from "../asserts/rooms_pic/family-suite-room-108/family-suite-room-108-1.jpeg";
 // ================= ROOMS DATA =================
 
 export const rooms = [
