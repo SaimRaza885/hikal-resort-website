@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 export default function BookingSidebar({
   room,
   maxGuests,
-  whatsappNumber = "923001234567",
+  whatsappNumber = ``,
   className = "",
 }) {
   const [checkIn, setCheckIn] = useState("");
@@ -196,12 +196,12 @@ export default function BookingSidebar({
             CTA BUTTONS
         =============================== */}
         <div className="space-y-3">
-          <Link
+          {/* <Link
             href={bookingHref}
             className="block w-full rounded-xl bg-primary px-4 py-3 text-center font-medium text-white hover:bg-primary/90"
           >
             Book Now
-          </Link>
+          </Link> */}
 
           <a
             href={whatsappLink}

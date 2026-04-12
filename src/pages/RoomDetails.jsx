@@ -22,8 +22,9 @@ import SimilarRooms from "../components/SimilarRooms";
 import RoomFaq from "../components/RoomFaq";
 import BookingSidebar from "../components/BookingSidebar";
 import RoomNotFound from "../components/RoomNotFound";
+import { WHATSAPP_NUMBER } from "../data/content";
 
-const WHATSAPP_NUMBER = "923001234567";
+
 
 /* ===============================
    BUILD GALLERY
@@ -211,7 +212,7 @@ export default function RoomDetailsPage({ params }) {
         />
       )}
 
-      <Footer />
+   
     </div>
   );
 }

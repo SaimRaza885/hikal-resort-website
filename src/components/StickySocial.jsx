@@ -1,24 +1,29 @@
 import { useState } from "react";
 import { MessageCircle, Facebook, Instagram, X } from "lucide-react";
+import {
+  FaceBookLink,
+  InstgramLink,
+  WHATSAPP_NUMBER,
+} from "../data/content";
 
 const links = [
   {
     id: "whatsapp",
-    href: "https://wa.me/923001234567",
+    href: `https://wa.me/${WHATSAPP_NUMBER}`,
     icon: MessageCircle,
     label: "WhatsApp",
     color: "bg-green-500 hover:bg-green-600",
   },
   {
     id: "instagram",
-    href: "https://instagram.com",
+    href: InstgramLink, // ✅ FIXED
     icon: Instagram,
     label: "Instagram",
     color: "bg-pink-500 hover:bg-pink-600",
   },
   {
     id: "facebook",
-    href: "https://facebook.com",
+    href: FaceBookLink, // ✅ FIXED
     icon: Facebook,
     label: "Facebook",
     color: "bg-blue-600 hover:bg-blue-700",
@@ -41,7 +46,7 @@ export function StickySocial() {
               key={item.id}
               href={item.href}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               aria-label={item.label}
               className={`group relative flex h-12 w-12 items-center justify-center rounded-full text-white shadow-lg transition-all duration-300 ${item.color}`}
               style={{
@@ -49,9 +54,8 @@ export function StickySocial() {
                 transform: open
                   ? "translateY(0px) scale(1)"
                   : "translateY(20px) scale(0.7)",
-                transition:
-                  `transform 350ms cubic-bezier(0.34,1.56,0.64,1) ${idx * 80}ms,
-                   opacity 300ms ease ${idx * 80}ms`,
+                transition: `transform 350ms cubic-bezier(0.34,1.56,0.64,1) ${idx * 80}ms,
+                             opacity 300ms ease ${idx * 80}ms`,
                 pointerEvents: open ? "auto" : "none",
               }}
             >
@@ -78,7 +82,11 @@ export function StickySocial() {
             display: "flex",
           }}
         >
-          {open ? <X className="h-6 w-6" /> : <MessageCircle className="h-6 w-6" />}
+          {open ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <MessageCircle className="h-6 w-6" />
+          )}
         </span>
 
         <span className="hidden sm:block text-sm font-medium">

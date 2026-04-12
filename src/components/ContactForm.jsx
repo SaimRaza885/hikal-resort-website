@@ -1,16 +1,9 @@
-import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { Loader2 } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import { WHATSAPP_NUMBER } from "../data/content";
 
 
-const EMAILJS_SERVICE_ID  = import.meta.env.VITE_EMAILJS_SERVICE_ID  || "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY  = import.meta.env.VITE_EMAILJS_PUBLIC_KEY  || "YOUR_PUBLIC_KEY";
-
-
-export default function ContactForm({ onSuccess, onError, className = "" }) {
-  const formRef = useRef(null);
+export default function ContactForm({ onSuccess, className = "" }) {
 
   const {
     register,
@@ -18,42 +11,55 @@ export default function ContactForm({ onSuccess, onError, className = "" }) {
     reset,
     formState: { errors, isSubmitting },
   } = useForm({
-    defaultValues: { name: "", email: "", subject: "", message: "" },
+    defaultValues: {
+      name: "",
+      email: "",
+      people: "",
+      message: "",
+    },
   });
 
-  async function onSubmit() {
-    try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        EMAILJS_PUBLIC_KEY
-      );
-      reset();
-      onSuccess?.();
-    } catch (error) {
-      onError?.(error);
-    }
+  /* ✅ SEND TO WHATSAPP */
+  function onSubmit(data) {
+
+    // email optional
+    const emailLine = data.email
+      ? `Email: ${data.email}\n`
+      : "";
+
+    const whatsappMessage = `
+New Booking Inquiry
+
+Name: ${data.name}
+${emailLine}Guests: ${data.people}
+
+Message:
+${data.message}
+`;
+
+    const whatsappLink =
+      `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+        whatsappMessage
+      )}`;
+
+    window.open(whatsappLink, "_blank");
+
+    reset();
+    onSuccess?.();
   }
 
-  /* ── shared input style ── */
   const inputClass =
     "h-12 w-full rounded-xl border border-border/60 px-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition";
 
   return (
     <div className={`rounded-2xl border border-border/50 bg-white p-8 shadow-lg ${className}`}>
-      <h3 className="mb-6 text-xl font-bold text-foreground">Send a Message</h3>
+      <h3 className="mb-6 text-xl font-bold text-foreground">
+        Book via WhatsApp
+      </h3>
 
-      {/*
-        IMPORTANT: input names MUST match your EmailJS template variables
-        e.g. {{name}}, {{email}}, {{subject}}, {{message}}
-      */}
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit(onSubmit)}
-        className="space-y-6"
-      >
-        {/* Name */}
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+
+        {/* Name (Required) */}
         <div>
           <label className="mb-2 block text-sm font-medium">Name</label>
           <input
@@ -66,30 +72,37 @@ export default function ContactForm({ onSuccess, onError, className = "" }) {
           )}
         </div>
 
-        {/* Email */}
+        {/* Email (OPTIONAL ✅) */}
         <div>
-          <label className="mb-2 block text-sm font-medium">Email</label>
+          <label className="mb-2 block text-sm font-medium">
+            Email (Optional)
+          </label>
           <input
             type="email"
             className={inputClass}
             placeholder="email@example.com"
-            {...register("email", { required: "Email is required" })}
+            {...register("email")}   
           />
-          {errors.email && (
-            <p className="mt-1 text-xs text-red-600">{errors.email.message}</p>
-          )}
         </div>
 
-        {/* Subject */}
+        {/* Number of People */}
         <div>
-          <label className="mb-2 block text-sm font-medium">Subject</label>
+          <label className="mb-2 block text-sm font-medium">
+            Number of People
+          </label>
           <input
+            type="number"
+            min="1"
             className={inputClass}
-            placeholder="Inquiry about..."
-            {...register("subject", { required: "Subject is required" })}
+            placeholder="How many guests?"
+            {...register("people", {
+              required: "Number of people is required",
+            })}
           />
-          {errors.subject && (
-            <p className="mt-1 text-xs text-red-600">{errors.subject.message}</p>
+          {errors.people && (
+            <p className="mt-1 text-xs text-red-600">
+              {errors.people.message}
+            </p>
           )}
         </div>
 
@@ -99,10 +112,14 @@ export default function ContactForm({ onSuccess, onError, className = "" }) {
           <textarea
             className="min-h-[150px] w-full rounded-xl border border-border/60 px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 transition resize-none"
             placeholder="How can we help you?"
-            {...register("message", { required: "Message is required" })}
+            {...register("message", {
+              required: "Message is required",
+            })}
           />
           {errors.message && (
-            <p className="mt-1 text-xs text-red-600">{errors.message.message}</p>
+            <p className="mt-1 text-xs text-red-600">
+              {errors.message.message}
+            </p>
           )}
         </div>
 
@@ -110,14 +127,15 @@ export default function ContactForm({ onSuccess, onError, className = "" }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="font-ui flex h-12 w-full items-center justify-center rounded-xl bg-primary text-lg text-white transition-colors hover:bg-primary/90 disabled:opacity-60"
+          className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-green-600 text-lg font-semibold text-white transition hover:bg-green-700 disabled:opacity-60"
         >
           {isSubmitting ? (
             <Loader2 className="h-5 w-5 animate-spin" />
           ) : (
-            "Send Message"
+            "Send to WhatsApp"
           )}
         </button>
+
       </form>
     </div>
   );

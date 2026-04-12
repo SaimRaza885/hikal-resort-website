@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import ContactInfoItem from "./ContactInfoItem";
+import { EMAIL, WHATSAPP_NUMBER } from "../data/content";
 
 /* =========================================================
    DEFAULT CONTACT DATA
@@ -15,13 +16,13 @@ const DEFAULT_ITEMS = [
     id: "phone",
     icon: Phone,
     title: "Phone",
-    lines: ["+92 300 123 4567", "Mon - Sun, 24 Hours"],
+    lines: [WHATSAPP_NUMBER, "Mon - Sun, 24 Hours"],
   },
   {
     id: "email",
     icon: Mail,
     title: "Email",
-    lines: ["reservations@hikal.com", "info@hikal.com"],
+    lines: [EMAIL],
   },
 ];
 

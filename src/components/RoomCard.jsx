@@ -7,8 +7,9 @@ import {
   ArrowUpRight,
   MessageCircle,
 } from "lucide-react";
+import { WHATSAPP_NUMBER } from "../data/content";
 
-const WHATSAPP_NUMBER = "923001234567";
+
 
 export default function RoomCard({ room }) {
   const discount =

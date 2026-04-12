@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { WHATSAPP_NUMBER } from "../data/content";
+import { EMAIL, FaceBookLink, InstgramLink, WHATSAPP_NUMBER } from "../data/content";
 
 export function Footer() {
   return (
@@ -23,7 +23,7 @@ export function Footer() {
             <Link href="/restaurant" className="w-fit text-sm text-primary-foreground/80 transition-colors hover:text-accent">Dining</Link>
             <Link href="/about" className="w-fit text-sm text-primary-foreground/80 transition-colors hover:text-accent">About</Link>
             <Link href="/gallery" className="w-fit text-sm text-primary-foreground/80 transition-colors hover:text-accent">Gallery</Link>
-          
+
           </div>
         </div>
 
@@ -36,11 +36,18 @@ export function Footer() {
             </div>
             <div className="flex items-center gap-3 text-sm text-primary-foreground/80">
               <Phone className="h-4 w-4 shrink-0 text-accent" />
-              <a href="tel:+923000000000" className="transition-colors hover:text-accent">{ WHATSAPP_NUMBER }</a>
+              <a href="https://wa.me/923138855508" className="transition-colors hover:text-accent">{WHATSAPP_NUMBER}</a>
             </div>
             <div className="flex items-center gap-3 text-sm text-primary-foreground/80">
               <Mail className="h-4 w-4 shrink-0 text-accent" />
-              <a href="mailto:info@hikal.com" className="transition-colors hover:text-accent">info@hikal.com</a>
+              <a
+                href={`mailto:${EMAIL}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-colors hover:text-accent"
+              >
+                {EMAIL}
+              </a>
             </div>
           </div>
         </div>
@@ -48,13 +55,13 @@ export function Footer() {
         <div className="space-y-4">
           <h4 className="text-lg font-semibold text-white">Follow Us</h4>
           <div className="flex gap-4">
-            <a href="#" className="rounded-full bg-white/10 p-2 transition-all hover:bg-accent hover:text-white"><Facebook className="h-5 w-5" /></a>
-            <a href="#" className="rounded-full bg-white/10 p-2 transition-all hover:bg-accent hover:text-white"><Instagram className="h-5 w-5" /></a>
+            <a href={FaceBookLink} className="rounded-full bg-white/10 p-2 transition-all hover:bg-accent hover:text-white"><Facebook className="h-5 w-5" /></a>
+            <a href={InstgramLink} className="rounded-full bg-white/10 p-2 transition-all hover:bg-accent hover:text-white"><Instagram className="h-5 w-5" /></a>
           </div>
           <div className="pt-4">
-            <Link href="/booking" className="font-ui block w-full rounded-xl bg-accent px-6 py-3 text-center font-medium text-white transition-colors hover:bg-accent/90">
+            {/* <Link href="/booking" className="font-ui block w-full rounded-xl bg-accent px-6 py-3 text-center font-medium text-white transition-colors hover:bg-accent/90">
               Book Your Stay
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

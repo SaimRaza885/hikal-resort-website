@@ -1,7 +1,8 @@
 // src/data/content.js
-
-export const WHATSAPP_NUMBER = "+1234567890";
-
+export const WHATSAPP_NUMBER = "923138855508";
+export const EMAIL = "info@hikalguesthouse.com";
+export const FaceBookLink ="https://www.facebook.com/HikalGuestHouse/"  
+export const InstgramLink ="https://www.instagram.com/hikalguesthouse_nagarvalley" 
 export const faqs = [
   {
     id: "1",
@@ -37,13 +38,13 @@ export const About_Paragraph = [
 ];
 
 export const About_Content = [
-  { label: "Phone", value: "+92 300 0000000" },
-  { label: "Email", value: "info@hikalguesthouse.com" },
+  { label: "Phone", value: WHATSAPP_NUMBER },
+  { label: "Email", value: EMAIL },
   { label: "Location", value: "Nagar Valley, Gilgit Baltistan" },
 ];
 
 export const About_Social = [
-  { name: "Facebook", link: "https://facebook.com" },
-  { name: "Instagram", link: "https://instagram.com" },
-  { name: "Booking.com", link: "https://booking.com" },
+  { name: "Facebook", link:FaceBookLink  },
+  { name: "Instagram", link:InstgramLink },
+  { name: "Booking.com", link: "https://www.booking.com/hotel/pk/hikal-guest-house.en-gb.html" },
 ];
