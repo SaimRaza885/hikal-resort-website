@@ -6,28 +6,35 @@ export const InstgramLink ="https://www.instagram.com/hikalguesthouse_nagarvalle
 export const faqs = [
   {
     id: "1",
-    question: "What services do you offer?",
+    question: "How do I book a room at Hikal Guest House?",
     answer:
-      "We offer full-service web design and development including landing pages, business websites, and custom web applications.",
+      "You can book directly through our website booking form or contact us via WhatsApp for a faster response. Payment before arrival by bank transfer is required — we will send you full instructions after your booking is confirmed.",
   },
-  {
+   {
     id: "2",
-    question: "How long does a project take?",
+    question: "Is breakfast included in the room price?",
     answer:
-      "Most projects take between 1–4 weeks depending on complexity and requirements.",
+      "Breakfast is optional and available at PKR 550 per person. It is not automatically included in the room rate but can be added at the time of booking or on arrival. In-room breakfast is also available on request.",
   },
   {
     id: "3",
-    question: "Do you offer revisions?",
+    question: "Do all rooms have mountain views?",
     answer:
-      "Yes, we include revision rounds to ensure the final product matches your expectations.",
+      "All rooms feature at least one of garden, mountain, or city views. The Family Suite and select Deluxe Double rooms include a private balcony or terrace with direct Rakaposhi mountain views — the most requested feature among our guests.",
   },
   {
     id: "4",
-    question: "How can I contact you?",
+    question: "What is your cancellation policy?",
     answer:
-      "You can reach us via WhatsApp or through the contact form on the website.",
+      "Cancellation policies vary by room type. Most rooms offer free cancellation before a set date. No prepayment is needed for select room types — you pay at the property. Check the specific conditions of your chosen room at the time of booking.",
   },
+  {
+    id: "5",
+    question: "Are pets allowed?",
+    answer:
+      "Yes, pets are warmly welcome at Hikal Guest House at no extra charge.",
+  },
+ 
 ];
 
 
