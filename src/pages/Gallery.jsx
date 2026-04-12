@@ -5,8 +5,7 @@ import Banner from "../components/Banner";
 import { images } from "../asserts/data";
 
 const ALL_IMAGES = [
-  images.gallary_3,
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556023879.jpg?k=71a4a353dbeeebb07303f1ce6108e861a3ef3296ff9f09eba829de14f12b53c1&o=",
+   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556023879.jpg?k=71a4a353dbeeebb07303f1ce6108e861a3ef3296ff9f09eba829de14f12b53c1&o=",
   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/462080151.jpg?k=fc463006c00d0b1c52e028cb6aaa92b288362a2ca4fa642ea42192ce05d8ab67&o=",
   images.gallary_2,
   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/555903424.jpg?k=bf8ce5e75687c11a474ca2fa6f14efbd613277dd6014d4565e201a5d5632fe33&o=",
