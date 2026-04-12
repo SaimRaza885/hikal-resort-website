@@ -16,7 +16,6 @@ const ALL_IMAGES = [
   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556023860.jpg?k=861191fea00e832812c5d7ac1cb01b17071f28452b282b5d61440175ff5d6383&o=",
   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556024348.jpg?k=f0f524419745d7074d078d5f999eb77b2c3ace4713e1631e4f730fd6d130927e&o=",
   images.gallary_4,
-  images.gallary_5,
   images.gallary_7,
   images.hero_1,
 
