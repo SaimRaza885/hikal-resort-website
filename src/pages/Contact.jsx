@@ -5,6 +5,7 @@ import { useToast }        from "../hooks/useToast";
 import Banner              from "../components/Banner";
 import ContactInfoPanel    from "../components/ContactInfoPanel";
 import ContactForm         from "../components/ContactForm";
+import { images } from "../asserts/data";
 
 export default function ContactPage() {
   useSeo({
@@ -35,7 +36,7 @@ export default function ContactPage() {
     
 
       <Banner
-        image="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?q=80&w=870&auto=format&fit=crop"
+        image={images.contact_Img}
         title="Contact Us"
         subtitle="Contact Hikal Guest House for inquiries and reservations."
         rating={5}

@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { images } from "../asserts/data";
 
 
 export default function PhilosophySection({
@@ -10,7 +11,7 @@ export default function PhilosophySection({
   ],
   ctaLabel = "Explore Facilities",
   ctaHref = "/about#facilities",
-  image =   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/815213298.jpg?k=c1cf0b687d2c2dad1bfe8c13f769e6c1d06ea6cf283a1ff9a0a829779ca736d9&o=",
+  image =   images.gallary_pic_9,
 
   imageAlt = "Hikal Guest House garden with Rakaposhi mountain view",
   className = "",

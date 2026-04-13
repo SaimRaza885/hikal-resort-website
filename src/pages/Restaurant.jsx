@@ -4,47 +4,13 @@ import MenuGrid from "../components/MenuGrid";
 import FeaturedDishCard from "../components/FeaturedDishCard";
 import { Reveal } from "../components/Reveal";
 import { images } from "../asserts/data";
+import FEATURED_DISHES from "../data/content";
 
-const BANNER_IMAGE =
-  "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/d7/d4/e1/hikal-guest-house.jpg?w=1100&h=1100&s=1";
 
 /* =========================================================
    Real local Nagar / Nagar / Pakistani featured dishes
 ========================================================= */
-const FEATURED_DISHES = [
-  {
-    id: 1,
-    title: "Mutton Karahi",
-    desc: "Slow-cooked tender mutton in a rich tomato and spice gravy, served with fresh naan.",
-    price: "PKR 3,500",
-    badge: "Chef Special",
-    image: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=600&q=80",
-  },
-  {
-    id: 2,
-    title: "Chapshuro",
-    desc: "Traditional Nagar meat pie — stuffed flatbread with spiced minced meat, pan-fried golden.",
-    price: "PKR 950",
-    badge: "Local Favourite",
-    image: "https://thebeautyofgilgitbaltistan.wordpress.com/wp-content/uploads/2020/01/foods-s-chapshuru2506577647222476830.jpg",
-  },
-  {
-    id: 3,
-    title: "Grilled River Trout",
-    desc: "Fresh Nagar valley trout marinated in herbs and charcoal-grilled, served with raita.",
-    price: "PKR 2,500",
-    badge: "Seasonal",
-    image: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=600&q=80",
-  },
-  {
-    id: 4,
-    title: "Mix BBQ Platter",
-    desc: "Seekh kebab, chicken tikka and lamb chops with mint chutney, naan and pickled onions.",
-    price: "PKR 3,800",
-    badge: "Best Seller",
-    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=600&q=80",
-  },
-];
+
 
 export default function Restaurant() {
   useSeo({
@@ -58,7 +24,7 @@ export default function Restaurant() {
 
       {/* Banner */}
       <Banner
-        image={BANNER_IMAGE}
+        image={images.gallary_pic_1}
         title="Restaurant"
         subtitle="Authentic Nagar flavours, warm hospitality"
       />
@@ -133,7 +99,7 @@ export default function Restaurant() {
             {/* Mobile: horizontal scroll */}
             <div className="flex md:hidden gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
               {FEATURED_DISHES.map((dish, i) => (
-                <Reveal key={dish.id} delay={i * 60}>
+                <Reveal key={i} delay={i * 60}>
                   <FeaturedDishCard
                     title={dish.title}
                     desc={dish.desc}

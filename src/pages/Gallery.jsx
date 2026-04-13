@@ -4,21 +4,32 @@ import { useSeo } from "../hooks/useSeo";
 import Banner from "../components/Banner";
 import { images } from "../asserts/data";
 
-const ALL_IMAGES = [
-   "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556023879.jpg?k=71a4a353dbeeebb07303f1ce6108e861a3ef3296ff9f09eba829de14f12b53c1&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/462080151.jpg?k=fc463006c00d0b1c52e028cb6aaa92b288362a2ca4fa642ea42192ce05d8ab67&o=",
-  images.gallary_2,
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/555903424.jpg?k=bf8ce5e75687c11a474ca2fa6f14efbd613277dd6014d4565e201a5d5632fe33&o=",
- "https://cf.bstatic.com/xdata/images/hotel/max1024x768/555955923.jpg?k=7d52be2305a48688850fbc79c4965eb62cbe2317c2d1d33b149e3d500d322e4c&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/814319360.jpg?k=c0ce21fe59b2e07d789d00ca913623cadb51816f7bb0bdce5d281bfb87d0029c&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/814322814.jpg?k=bf7c4af96e11b9c2560509c6c974ea485784a55ed6b49f51251d535a2b17c5a3&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/815213298.jpg?k=c1cf0b687d2c2dad1bfe8c13f769e6c1d06ea6cf283a1ff9a0a829779ca736d9&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556023860.jpg?k=861191fea00e832812c5d7ac1cb01b17071f28452b282b5d61440175ff5d6383&o=",
-  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/556024348.jpg?k=f0f524419745d7074d078d5f999eb77b2c3ace4713e1631e4f730fd6d130927e&o=",
+// ================= ALL IMAGES (LOCAL ONLY) =================
 
-  images.gallary_7,
+export const ALL_IMAGES = [
+  // hero
   images.hero_1,
+  images.hero_2,
+  images.hero_3,
 
+  // main gallery
+  images.gallary_1,
+  images.gallary_2,
+  images.gallary_5,
+  images.gallary_6,
+  images.gallary_7,
+
+  // new gallery pictures
+  images.gallary_pic_1,
+  images.gallary_pic_2,
+  images.gallary_pic_3,
+  images.gallary_pic_4,
+  images.gallary_pic_5,
+  images.gallary_pic_6,
+  images.gallary_pic_7,
+  images.gallary_pic_8,
+  images.gallary_pic_9,
+  images.gallary_pic_10,
 ];
 
 const INITIAL_COUNT = 6;

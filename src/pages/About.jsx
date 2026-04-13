@@ -9,6 +9,7 @@ import RatingPlatformsGrid     from "../components/RatingPlatformsGrid";
 import FacilitiesGrid          from "../components/FacilitiesGrid";
 import CtaBanner               from "../components/CtaBanner";
 import { About_Content, About_Paragraph, About_Social } from "../data/content";
+import { images } from "../asserts/data";
 
 
 export default function AboutPage() {
@@ -24,7 +25,7 @@ export default function AboutPage() {
 
       {/* HERO BANNER */}
       <Banner
-        image="https://plus.unsplash.com/premium_photo-1677529498680-fdb9d5ee762a?q=80&w=870&auto=format&fit=crop"
+        image={images.hero_1}
         title="About us"
         subtitle="About Hikal Guest House"
         rating={5}

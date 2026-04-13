@@ -4,8 +4,8 @@ import { SkeletonRoomCard } from "../components/SkeletonRoomCard";
 import { Reveal } from "../components/Reveal";
 import { useRooms } from "../hooks/useRooms";
 import { useSeo } from "../hooks/useSeo";
-import { PageLoader } from "../components/PageLoader";
 import Banner from "../components/Banner";
+import { images } from "../asserts/data";
 
 export default function Rooms() {
   useSeo({
@@ -19,7 +19,7 @@ export default function Rooms() {
 
     <div id="rooms" className="min-h-screen bg-background">
       <Banner
-        image="https://images.unsplash.com/photo-1702675301228-b3291c1060bc?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        image={images.hero_2}
         title="Rooms"
         subtitle="Explore room categories at Hikal Guest House"
         rating={5}
